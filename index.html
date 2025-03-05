@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Wiki</title>
+    <title>Wiki - Configuration</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
-    <!-- Barre latérale du menu -->
-    <aside>
+    <div class="sidebar">
         <h2>📖 Wiki</h2>
         <ul>
-            <li onclick="showSection('introduction')">📌 Introduction</li>
-            <li onclick="showSection('setup')">⚙️ Setup</li>
+            <li><a href="#introduction" class="nav-link">📌 Introduction</a></li>
+            <li><a href="#setup" class="nav-link">⚙️ Setup</a></li>
         </ul>
-    </aside>
-
-    <!-- Contenu principal -->
-    <main>
-        <div id="language-switcher">
-            <img src="images/france.png" alt="Français" onclick="switchLanguage('fr')" class="flag">
-            <img src="images/uk.png" alt="English" onclick="switchLanguage('en')" class="flag">
+        <div class="language-switcher">
+            <img src="images/france.png" alt="Français" onclick="changeLanguage('fr')">
+            <img src="images/uk.png" alt="English" onclick="changeLanguage('en')">
         </div>
-
-        <section id="introduction" class="content">
-            <h1 data-fr="Introduction" data-en="Introduction">Introduction</h1>
-            <p data-fr="Bienvenue sur le Wiki !" data-en="Welcome to the Wiki!">Bienvenue sur le Wiki !</p>
-            <img src="images/wiki-example.png" alt="Example">
+    </div>
+    
+    <div class="content">
+        <section id="introduction">
+            <h1>Bienvenue dans le Wiki</h1>
+            <p>Ce guide vous aidera à configurer correctement le projet.</p>
+            <img src="images/wiki-example.png" alt="Exemple du Wiki">
         </section>
-
-        <section id="setup" class="content hidden">
-            <h1 data-fr="Configuration" data-en="Setup">Configuration</h1>
-            <p data-fr="Voici comment configurer votre projet." data-en="Here’s how to set up your project.">
-                Voici comment configurer votre projet.
-            </p>
-            <img src="images/setup-guide.png" alt="Setup Guide">
+        
+        <section id="setup">
+            <h1>Installation & Configuration</h1>
+            <p>Suivez ces étapes :</p>
+            <ol>
+                <li>Téléchargez le projet depuis GitHub</li>
+                <li>Ajoutez vos informations de configuration</li>
+                <li>Lancez le serveur</li>
+            </ol>
+            <img src="images/setup-guide.png" alt="Guide de configuration">
         </section>
-    </main>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
