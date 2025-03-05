@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+}
+
+aside {
+    width: 250px;
+    background: #24292e;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+aside h2 {
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+aside li:hover {
+    background: #444c56;
+}
+
+main {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.flag {
+    width: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+}
